@@ -1,0 +1,19 @@
+/*Estilizando por #id*/
+#titulo {
+  color: red;
+  font-size: 55px;
+}
+
+.paragrafo {
+  color: blue;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#botao {
+  background: purple;
+}
+
+#outro-botao {
+  background: yellow;
+}
