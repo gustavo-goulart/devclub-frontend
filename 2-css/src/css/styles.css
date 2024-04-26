@@ -1,0 +1,18 @@
+h1 {
+  color: red;
+  background: black;
+}
+
+p {
+  color: blue;
+  font-size: 20px;
+}
+
+button {
+  background: green;
+  border-radius: 15px;
+  border: none;
+  color: antiquewhite;
+  width: 120px;
+  height: 44px;
+}
