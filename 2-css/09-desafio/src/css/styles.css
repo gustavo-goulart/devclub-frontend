@@ -13,7 +13,7 @@
 }
 
 .nav-link {
-  margin: 32px;
+  margin-right: 32px;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -25,13 +25,16 @@
 
 .btn-link {
   background-color: #6fbf44;
+  border: 1px solid #4cb538;
   width: 124px;
   height: 51px;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   color: #ffffff;
-  padding-top: 16px;
-  padding-bottom: 14px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
   cursor: pointer;
 }
 
@@ -46,7 +49,11 @@
   width: 595px;
   height: 500px;
   margin-top: 40px;
-  margin-left: 126px;
+  margin-left: 40px;
+}
+
+section {
+  width: 493px;
 }
 
 h1 {
@@ -61,7 +68,6 @@ h1 {
 p {
   margin-top: 47px;
   margin-bottom: 55px;
-  margin-right: 16px;
   color: #4b505a;
   font-size: 18px;
   font-weight: 500;
