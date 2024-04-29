@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&display=swap");
+
+body {
+  font-family: "Jersey", sans-serif;
+}
+
+h1 {
+  color: red;
+  font-style: italic;
+  text-shadow: 5px 5px 8px #ff0000;
+}
+
+p {
+  color: blue;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 50px;
+  letter-spacing: 10px;
+  word-spacing: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
