@@ -1,0 +1,13 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #ff1493;
+
+  /* margin-top: 30px;
+  margin-bottom: 25px;
+  margin-right: 16px;
+  margin-left: 12px; */
+
+  margin: 10px 50px 30px 5px;
+  /*       mt   mr   mb   ml  */
+}
