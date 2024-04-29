@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #ff1493;
+  margin: 10px;
+  display: inline-block;
+}
+
+.box-2 {
+  background-color: #ffff00;
+}
+
+.box-3 {
+  background-color: #0003ff;
+}
