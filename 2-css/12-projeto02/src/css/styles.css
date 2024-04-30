@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
 }
 
 .conatiner {
@@ -15,6 +16,7 @@
 .container-left {
   display: inline-block;
   width: 65%;
+  padding: 120px;
 }
 
 .container-right {
@@ -31,4 +33,69 @@ img {
   position: relative;
   top: 15%;
   right: 110px;
+}
+
+h1 {
+  width: 368px;
+  height: 160px;
+  font-size: 70px;
+  line-height: 80px;
+  text-align: left;
+  color: #5d5d7d;
+}
+
+p {
+  font-size: 28px;
+  line-height: 48px;
+  width: 540px;
+  height: 144px;
+  color: rgba(93, 93, 125, 0.6);
+  margin: 15px 0; /*15px top e bottom 0 lados*/
+}
+
+button {
+  width: 169px;
+  height: 52px;
+  background-color: #9499ea;
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  box-shadow: rgba(148, 153, 234, 0.979959);
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button:active {
+  opacity: 0.5;
+}
+
+header {
+  margin: 24px 0 0 57px;
+}
+
+a {
+  font-size: 26px;
+  line-height: 41.5px;
+  text-decoration: none;
+  color: #5d5d7d;
+  margin-right: 41px;
+  cursor: pointer;
+}
+
+a:nth-child(2) {
+  opacity: 0.4;
+}
+
+a:hover {
+  opacity: 0.4;
+}
+
+a:active {
+  opacity: 0.8;
 }
