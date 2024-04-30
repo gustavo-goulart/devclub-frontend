@@ -88,3 +88,41 @@ p {
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
+
+@media screen and (max-width: 710px) {
+  nav {
+    display: none;
+  }
+
+  main {
+    padding: 0 auto;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  img {
+    margin-top: 120px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  p {
+    display: none;
+  }
+
+  button {
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+}
