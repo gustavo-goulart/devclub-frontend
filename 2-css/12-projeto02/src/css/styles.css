@@ -99,3 +99,57 @@ a:hover {
 a:active {
   opacity: 0.8;
 }
+
+@media screen and (max-width: 900px) {
+  .container-left {
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .container-right {
+    display: block;
+    height: auto;
+    width: 100%;
+    position: static;
+    padding: 40px;
+    margin-top: 35px;
+  }
+
+  header {
+    display: none;
+  }
+
+  img {
+    position: static;
+    max-width: 90%;
+  }
+
+  h1 {
+    width: auto;
+    font-size: 36px;
+    line-height: 52px;
+    text-align: center;
+    margin: 58px 54px 0 54px; /* topo | direita | inferior | esquerda */
+  }
+
+  p {
+    margin: 15px 40px; /* vertical | horizontal */
+    width: auto;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container-left {
+    height: 70%;
+  }
+}
