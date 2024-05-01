@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Exemplo de Uso do getElementById</h2>
+
+    <p id="demo">Este é um parágrafo de exemplo.</p>
+
+    <button onclick="alterarTexto()">Clique aqui para alterar o texto</button>
+
+    <script>
+      function alterarTexto() {
+        // Obtendo uma referência ao elemento com o id "demo"
+        let elemento = document.getElementById("demo");
+
+        // Alterando o conteúdo do parágrafo
+        elemento.innerHTML = "Texto alterado!";
+      }
+    </script>
+  </body>
+</html>
