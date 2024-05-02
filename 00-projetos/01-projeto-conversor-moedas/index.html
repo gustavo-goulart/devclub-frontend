@@ -13,23 +13,21 @@
     <title>Convert Money</title>
   </head>
   <body>
-    <img src="assests/images/logo.gif" alt="logo mãos" />
-
     <main>
       <label>
-        Converter <strong>de</strong>
+        Converter <strong>de:</strong>
         <select>
           <option>R$ Real Brasileiro</option>
         </select>
       </label>
 
       <label>
-        Converter <strong>para</strong>
+        Converter <strong>para:</strong>
         <select>
-          <option>US$ Dólar Americano</option>
-          <option>€ Euro</option>
-          <option>GBP Libras</option>
-          <option>BTn Bitcoin</option>
+          <option>US$-Dólar Americano</option>
+          <option>€-Euro</option>
+          <option>GBP-Libras</option>
+          <option>BTn-Bitcoin</option>
         </select>
       </label>
 
@@ -41,22 +39,23 @@
       <button>Converter</button>
 
       <section>
-        <div>
+        <div class="currency-box">
           <img src="assests/images/real.png" alt="logo-moeda-a-converter" />
-          <p>Real</p>
-          <p>R$ 0,00</p>
+          <p class="currency">Real</p>
+          <p class="currency-value">R$ 0,00</p>
         </div>
 
         <div>
-          <img src="assests/images/seta.png" alt="seta" />
+          <img src="assests/images/seta.png" class="arrow-img" alt="seta" />
         </div>
 
-        <div>
+        <div class="currency-box">
           <img src="assests/images/dolar.png" alt="logo-moeda-convertida" />
-          <p>Dólar</p>
-          <p>US$ 0,00</p>
+          <p class="currency">Dólar</p>
+          <p class="currency-value">US$ 0.00</p>
         </div>
       </section>
     </main>
   </body>
+  <script src="src/js/script.js"></script>
 </html>
