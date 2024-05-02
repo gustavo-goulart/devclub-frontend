@@ -1,9 +1,11 @@
 const input = document.querySelector("#main-input");
+const select = document.querySelector("select");
+const button = document.querySelector(".main-button");
 
-function cliqueiNoBotao() {
-  console.log(input.value);
+function troqueiValor(event) {
+  console.log(event);
 }
 
-function digiteiNoInput() {
-  console.log("Digitei no Input");
-}
+// select.addEventListener("change", troqueiValor);
+// input.addEventListener("keypress", troqueiValor);
+button.addEventListener("click", troqueiValor);
