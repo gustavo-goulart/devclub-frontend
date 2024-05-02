@@ -1,13 +1,8 @@
-const element = document.querySelector(".paragraph-js");
+// const button = document.querySelector(".main-button");
+const button = document.querySelector("h1");
 
-//ALTERANDO O TEXTO
-// element.textContent = "O novo texto é esse";
+// button.style.color = "#000";
 
-element.innerHTML = "O texto alterado com <b>NEGRITO</>";
-
-//SÓ O HTML
-console.log(element.textContent);
-//LEVA EM CONTA O CSS
-console.log(element.innerText);
-//TRÁS TUDO
-console.log(element.innerHTML);
+//propriedades q tenham hífen descreve com camel case background-color -> backgroundColor
+// button.style.backgroundColor = "#852394";
+button.style.fontSize = "58px";
