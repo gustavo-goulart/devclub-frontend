@@ -35,4 +35,22 @@ function convertValues() {
   }).format(inputCurrencyValue);
 }
 
+function changeCurrency() {
+  const currencyName = document.getElementById("currency-name");
+  const currencyImage = document.querySelector(".currency-img");
+
+  if (currencySelect.value == "dolar") {
+    currencyName.innerHTML = "Dólar Americano";
+    currencyImage.src = "./assets/images/dolar.png";
+  }
+
+  if (currencySelect.value == "euro") {
+    currencyName.innerHTML = "Euro";
+    currencyImage.src = "./assets/images/euro.png";
+  }
+
+  convertValues();
+}
+
 convertButton.addEventListener("click", convertValues);
+currencySelect.addEventListener("change", changeCurrency);
