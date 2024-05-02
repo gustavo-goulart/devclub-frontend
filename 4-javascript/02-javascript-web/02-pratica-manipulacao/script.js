@@ -1,7 +1,13 @@
-const element = document.querySelector("img");
+const element = document.querySelector(".paragraph-js");
 
-// element.placeholder = "Mudei oq estava escrito no placeholder";
+//ALTERANDO O TEXTO
+// element.textContent = "O novo texto é esse";
 
-// element.value = 1982
+element.innerHTML = "O texto alterado com <b>NEGRITO</>";
 
-console.log(element.src);
+//SÓ O HTML
+console.log(element.textContent);
+//LEVA EM CONTA O CSS
+console.log(element.innerText);
+//TRÁS TUDO
+console.log(element.innerHTML);
