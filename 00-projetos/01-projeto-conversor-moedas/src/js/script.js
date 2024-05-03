@@ -78,6 +78,7 @@ function changeCurrency() {
   }
 
   convertValues();
+  resetInput();
 }
 
 function resetInput() {
