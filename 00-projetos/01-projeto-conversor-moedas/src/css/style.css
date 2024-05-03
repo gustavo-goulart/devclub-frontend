@@ -95,3 +95,19 @@ section {
   font-size: 20px;
   font-weight: 700;
 }
+
+@media screen and (max-width: 900px) {
+  body {
+    background-image: url("../../assets/images/background-moeda.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  main {
+    width: 325px;
+    background: rgba(244, 244, 244, 0.8);
+    border-radius: 20px;
+    margin: 16px auto 15px;
+    padding: 10px 24px 20px;
+  }
+}

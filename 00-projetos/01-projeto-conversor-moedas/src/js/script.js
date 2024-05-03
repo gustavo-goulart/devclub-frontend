@@ -78,12 +78,12 @@ function changeCurrency() {
   }
 
   convertValues();
-  resetInput();
 }
 
 function resetInput() {
   document.getElementById("reset").value = "";
 }
 
-convertButton.addEventListener("click", convertValues, resetInput);
+convertButton.addEventListener("click", convertValues);
+convertButton.addEventListener("click", resetInput);
 currencySelect.addEventListener("change", changeCurrency);
