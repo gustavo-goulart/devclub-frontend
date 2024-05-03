@@ -5,7 +5,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 110px 0;
+  min-height: 100vh;
 }
 
 img {
@@ -13,12 +13,12 @@ img {
   height: 174px;
 }
 
-p {
+h2 {
   color: #ffffff;
   margin-top: 65px;
   margin-bottom: 18px;
   text-align: center;
-  font-size: 28px;
+  font-size: 24px;
 }
 
 input {
