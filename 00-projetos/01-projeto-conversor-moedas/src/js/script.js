@@ -8,10 +8,11 @@ function convertValues() {
   ); // valor em R$
   const currencyValueConverted = document.querySelector(".currency-value"); //outras moedas
 
-  console.log(currencySelect.value);
-
-  const dolarToday = 5.113;
+  const dolarToday = 5.07;
   const euroToday = 5.485;
+  const librasToday = 6.38;
+  const bitcoinValueToday = 61097.432;
+  const bitcoinToday = bitcoinValueToday * dolarToday;
 
   if (currencySelect.value == "dolar") {
     //Se o select estiver selecionado o valor de dolar entra aqui
@@ -27,6 +28,23 @@ function convertValues() {
       style: "currency",
       currency: "EUR",
     }).format(inputCurrencyValue / euroToday);
+  }
+
+  if (currencySelect.value == "libras") {
+    //Se o select estiver selecionado o valor de euro entra aqui
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+    }).format(inputCurrencyValue / librasToday);
+  }
+
+  if (currencySelect.value == "bitcoin") {
+    //Se o select estiver selecionado o valor de euro entra aqui
+    currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "BTC",
+      maximumSignificantDigits: 9,
+    }).format(inputCurrencyValue / bitcoinToday);
   }
 
   currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
@@ -49,8 +67,23 @@ function changeCurrency() {
     currencyImage.src = "./assets/images/euro.png";
   }
 
+  if (currencySelect.value == "libras") {
+    currencyName.innerHTML = "GBP-Libras";
+    currencyImage.src = "./assets/images/libra.png";
+  }
+
+  if (currencySelect.value == "bitcoin") {
+    currencyName.innerHTML = "BTC-Bitcoin";
+    currencyImage.src = "./assets/images/bitcoin.png";
+  }
+
   convertValues();
+  resetInput();
 }
 
-convertButton.addEventListener("click", convertValues);
+function resetInput() {
+  document.getElementById("reset").value = "";
+}
+
+convertButton.addEventListener("click", convertValues, resetInput);
 currencySelect.addEventListener("change", changeCurrency);
