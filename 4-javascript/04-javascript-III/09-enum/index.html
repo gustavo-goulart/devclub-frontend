@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <title>Projeto | Joken-Pô</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Joken-Pô</h1>
+
+      <div class="btn">
+        <button id="rock" onclick="playHuman('rock')">&#x1F44A</button>
+        <button id="paper" onclick="playHuman('paper')">&#x1f590</button>
+        <button id="scissors" onclick="playHuman('scissors')">&#x270c</button>
+      </div>
+
+      <p class="your-score">Sua pontuação - <span id="human-score">0</span></p>
+      <p class="machine-score">Pontuação Alexa - <span id="machine-score">0</span></p>
+      <p class="result"></p>
+    </div>
+  </body>
+  <script src="src/js/script.js"></script>
+</html>
