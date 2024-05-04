@@ -3,13 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/css/styles.css" />
     <title>Contador</title>
   </head>
   <body>
-    <h1>CONTADOR</h1>
-    <h2>0</h2>
-    <button onclick="stop()">Stop</button>
-    <button onclick="start()">Start</button>
+    <main>
+      <h1>CRONÔMETRO</h1>
+      <img src="assets/images/crono.png" alt="" />
+      <h2>00:00:00</h2>
+      <div class="btn">
+        <button onclick="stop()">Stop</button>
+        <button onclick="start()">Start</button>
+      </div>
+      <button class="btn-reset" onclick="reset()">Reset</button>
+    </main>
   </body>
   <script src="src/js/script.js"></script>
 </html>
