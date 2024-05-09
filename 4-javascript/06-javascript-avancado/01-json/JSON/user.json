@@ -1,0 +1,7 @@
+{
+  "nome": "Gustavo",
+  "idade": 42,
+  "filhos": 1,
+  "casado": true,
+  "hobbies": ["Viajar", "Codar", "Filmes"]
+}
