@@ -14,6 +14,11 @@ function convertValues() {
   const bitcoinValueToday = 61097.432;
   const bitcoinToday = bitcoinValueToday * dolarToday;
 
+  //assync wait
+  const data = fetch(
+    "https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,BTC-BRL"
+  ).then((response) => response.json());
+
   if (currencySelect.value == "dolar") {
     //Se o select estiver selecionado o valor de dolar entra aqui
     currencyValueConverted.innerHTML = new Intl.NumberFormat("en-US", {
