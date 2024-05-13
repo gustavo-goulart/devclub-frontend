@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
+import { Container } from "./styles.js";
+
 function App() {
   const [list, setList] = useState([{ id: uuid(), task: "Nada" }]);
   const [inputTask, setInputTask] = useState("");
@@ -15,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <Container>
         <input onChange={inputMudou} placeholder="Digite uma tarefa..." />
         <button onClick={clicarNoBotao}>Adicionar</button>
         <ul>
@@ -23,7 +25,7 @@ function App() {
             <li key={item.id}>{item.task}</li>
           ))}
         </ul>
-      </div>
+      </Container>
     </>
   );
 }
