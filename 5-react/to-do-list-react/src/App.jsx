@@ -1,18 +1,16 @@
-function App() {
-  const list = [
-    { id: 25845, task: "Compras" },
-    { id: 15478, task: "Entregar Projeto" },
-    { id: 14577, task: "Estudar" },
-  ];
+import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
-  //"Compras", "Entregar Projeto", "Estudar"
+function App() {
+  const [list, setList] = useState([{ id: uuid(), task: "Nada" }]);
+  const [inputTask, setInputTask] = useState("");
 
   function inputMudou(event) {
-    console.log(event.target.value);
+    setInputTask(event.target.value);
   }
 
   function clicarNoBotao() {
-    console.log("Cliquei no botão");
+    setList([...list, { id: uuid(), task: inputTask }]);
   }
 
   return (
