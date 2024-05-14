@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 
-import { FcEmptyTrash, FcOk } from "react-icons/fc";
+import { FcCheckmark, FcEmptyTrash, FcOk } from "react-icons/fc";
 
-import { Container, ToDoList, Input, Button } from "./styles.js";
+import { Container, ToDoList, Input, Button, ListItem } from "./styles.js";
 
 function App() {
   const [list, setList] = useState([{ id: uuid(), task: "Nada" }]);
@@ -25,11 +25,11 @@ function App() {
           <Button onClick={clicarNoBotao}>Adicionar</Button>
           <ul>
             {list.map((item) => (
-              <div>
-                <FcOk />
+              <ListItem>
+                <FcCheckmark />
                 <li key={item.id}>{item.task}</li>
                 <FcEmptyTrash />
-              </div>
+              </ListItem>
             ))}
           </ul>
         </ToDoList>
