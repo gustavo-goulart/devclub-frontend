@@ -27,6 +27,12 @@ function App() {
     setList(newList);
   }
 
+  function deletarTarefa(id) {
+    const newList = list.filter((item) => item.id !== id);
+
+    setList(newList);
+  }
+
   return (
     <>
       <Container>
@@ -38,7 +44,7 @@ function App() {
               <ListItem isFinished={item.finished} key={item.id}>
                 <FcCheckmark onClick={() => finalizarTarefa(item.id)} />
                 <li>{item.task}</li>
-                <FcEmptyTrash />
+                <FcEmptyTrash onClick={() => deletarTarefa(item.id)} />
               </ListItem>
             ))}
           </ul>
