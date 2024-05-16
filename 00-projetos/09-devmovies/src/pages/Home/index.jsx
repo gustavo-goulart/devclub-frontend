@@ -9,6 +9,7 @@ import {
   Poster,
 } from "./styles";
 import Button from "../../components/Button";
+import Slider from "../../components/Slider";
 
 function Home() {
   const [movie, setMovie] = useState();
@@ -28,7 +29,7 @@ function Home() {
       } = await api.get("/movie/top_rated");
 
       console.log(results);
-      setTopMovies(results[7]);
+      setTopMovies(results);
     }
 
     getMovies();
@@ -60,6 +61,7 @@ function Home() {
           </Container>
         </Background>
       )}
+      {topMovies && <Slider info={topMovies} title={"Top Filmes"} />}
     </>
   );
 }
