@@ -15,13 +15,15 @@ import { getImages } from "../../utils/getImages";
 function Home() {
   const [movie, setMovie] = useState();
   const [topMovies, setTopMovies] = useState();
+  const [topSeries, setTopSeries] = useState();
+
   useEffect(() => {
     async function getMovies() {
       const {
         data: { results },
       } = await api.get("/movie/popular");
 
-      setMovie(results[7]);
+      setMovie(results[0]);
     }
 
     async function getTopMovies() {
@@ -29,12 +31,21 @@ function Home() {
         data: { results },
       } = await api.get("/movie/top_rated");
 
-      console.log(results);
       setTopMovies(results);
+    }
+
+    async function getTopSeries() {
+      const {
+        data: { results },
+      } = await api.get("/tv/top_rated");
+
+      console.log(results);
+      setTopSeries(results);
     }
 
     getMovies();
     getTopMovies();
+    getTopSeries();
   }, []);
 
   return (
@@ -58,6 +69,7 @@ function Home() {
         </Background>
       )}
       {topMovies && <Slider info={topMovies} title={"Top Filmes"} />}
+      {topSeries && <Slider info={topSeries} title={"Top Séries"} />}
     </>
   );
 }

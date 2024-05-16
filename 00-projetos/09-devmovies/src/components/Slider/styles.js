@@ -5,7 +5,7 @@ export const Container = styled.div`
     color: #fff;
     margin-top: 15px;
     font-size: 1.8rem;
-    margin: 30px 0 20px 20px;
+    margin: 20px 0 20px 20px;
   }
 
   .swiper-wrapper {

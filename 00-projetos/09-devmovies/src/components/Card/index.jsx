@@ -5,7 +5,7 @@ function Card({ item }) {
   return (
     <Container>
       <img src={getImages(item.poster_path)} />
-      <h4>{item.original_title}</h4>
+      <h4>{item.title}</h4>
     </Container>
   );
 }
