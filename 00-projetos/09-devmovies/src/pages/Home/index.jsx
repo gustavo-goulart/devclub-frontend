@@ -10,6 +10,7 @@ import {
 } from "./styles";
 import Button from "../../components/Button";
 import Slider from "../../components/Slider";
+import { getImages } from "../../utils/getImages";
 
 function Home() {
   const [movie, setMovie] = useState();
@@ -39,9 +40,7 @@ function Home() {
   return (
     <>
       {movie && (
-        <Background
-          img={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-        >
+        <Background img={getImages(movie.backdrop_path)}>
           <Container>
             <Info>
               <h1>{movie.title}</h1>
@@ -53,10 +52,7 @@ function Home() {
             </Info>
 
             <Poster>
-              <img
-                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                alt="capa-do-filme"
-              />
+              <img src={getImages(movie.poster_path)} alt="capa-do-filme" />
             </Poster>
           </Container>
         </Background>
