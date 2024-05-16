@@ -4,8 +4,8 @@ import { Container } from "./styles";
 function Card({ item }) {
   return (
     <Container>
-      <img src={getImages(item.poster_path)} />
-      <h4>{item.title}</h4>
+      <img src={getImages(item.poster_path || item.profile_path || "")} />
+      <h4>{item.title || item.name}</h4>
     </Container>
   );
 }
