@@ -12,7 +12,7 @@ import Button from "../../components/Button";
 
 function Home() {
   const [movie, setMovie] = useState();
-
+  const [topMovies, setTopMovies] = useState();
   useEffect(() => {
     async function getMovies() {
       const {
@@ -22,7 +22,17 @@ function Home() {
       setMovie(results[7]);
     }
 
+    async function getTopMovies() {
+      const {
+        data: { results },
+      } = await api.get("/movie/top_rated");
+
+      console.log(results);
+      setTopMovies(results[7]);
+    }
+
     getMovies();
+    getTopMovies();
   }, []);
 
   return (
