@@ -11,7 +11,6 @@ function Modal({ movieId, setShowModal }) {
         data: { results },
       } = await api.get(`/movie/${movieId}/videos`);
 
-      console.log(results);
       setMovie(results);
     }
 
