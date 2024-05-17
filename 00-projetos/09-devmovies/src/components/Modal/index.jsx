@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Container, Background } from "./styles";
 import api from "../../services/api";
 
-function Modal({ movieId }) {
-  useEffect(() => {
-    const [movie, setMovie] = useState();
+function Modal({ movieId, setShowModal }) {
+  const [movie, setMovie] = useState();
 
+  useEffect(() => {
     async function getMovies() {
       const {
         data: { results },
-      } = await api.get(`/movie/${movieId}/ videos`);
+      } = await api.get(`/movie/${movieId}/videos`);
 
       console.log(results);
       setMovie(results);
@@ -19,7 +19,7 @@ function Modal({ movieId }) {
   }, []);
 
   return (
-    <Background>
+    <Background onClick={() => setShowModal(false)}>
       {movie && (
         <Container>
           <iframe

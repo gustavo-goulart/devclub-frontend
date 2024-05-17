@@ -14,6 +14,7 @@ import Slider from "../../components/Slider";
 import { getImages } from "../../utils/getImages";
 
 function Home() {
+  const [showModal, setShowModal] = useState(false);
   const [movie, setMovie] = useState();
   const [topMovies, setTopMovies] = useState();
   const [topSeries, setTopSeries] = useState();
@@ -26,7 +27,7 @@ function Home() {
         data: { results },
       } = await api.get("/movie/popular");
 
-      setMovie(results[0]);
+      setMovie(results[7]);
     }
 
     async function getTopMovies() {
@@ -72,14 +73,18 @@ function Home() {
     <>
       {movie && (
         <Background img={getImages(movie.backdrop_path)}>
-          <Modal movieId={movie.id} />
+          {showModal && (
+            <Modal movieId={movie.id} setShowModal={setShowModal} />
+          )}
           <Container>
             <Info>
               <h1>{movie.title}</h1>
               <p>{movie.overview}</p>
               <ContainerButtons>
                 <Button red={true}>Assista Agora</Button>
-                <Button red={false}>Assista o Trailer</Button>
+                <Button onClick={() => setShowModal(true)} red={false}>
+                  Assista o Trailer
+                </Button>
               </ContainerButtons>
             </Info>
 
