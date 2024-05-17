@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import api from "../../services/api";
+import Modal from "../../components/Modal";
 import {
   Background,
   Container,
@@ -71,6 +72,7 @@ function Home() {
     <>
       {movie && (
         <Background img={getImages(movie.backdrop_path)}>
+          <Modal movieId={movie.id} />
           <Container>
             <Info>
               <h1>{movie.title}</h1>
