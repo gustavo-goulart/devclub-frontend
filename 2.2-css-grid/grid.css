@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+.space {
+  /* height: 300px;
+  width: 300px; */
+  color: white;
+  font-size: 30px;
+}
+
+.one {
+  background: #333453;
+}
+
+.two {
+  background: #259b11;
+}
+
+.three {
+  background: #800534;
+}
+
+.four {
+  background: #8c8fb9;
+}
+
+.five {
+  background: #ff0a0a;
+}
+
+.six {
+  background: #18391e;
+}
+
+.seven {
+  background: #0911f3;
+}
+
+.eight {
+  background: #ef18a8;
+}
+
+.nine {
+  background: #07fa54;
+}
