@@ -11,11 +11,15 @@ h1 {
 .container {
   margin: 10px;
   border: 1px solid #9758a6;
+  display: flex;
+  /* width: 500px; */
+  height: 500px;
+  justify-content: space-between;
 }
 
 .block {
-  width: 100px;
-  height: 100px;
+  /* width: 100px;
+  height: 100px; */
   background: #cdd728;
   border: 5px solid #9758a6;
   border-radius: 5px;
@@ -23,4 +27,24 @@ h1 {
   font-weight: bold;
   text-align: center;
   margin: 10px;
+  /* flex-basis: 300px;
+  flex-grow: 1; */
+  flex: 100px 4 4; /*flex-basis / flex-grow / flex-shirink */
+  order: 2;
+}
+
+.second-block {
+  /* width: 100px;
+  height: 100px; */
+  background: #cdd728;
+  border: 5px solid #9758a6;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+  /* flex-basis: 300px;
+  flex-grow: 1; */
+  flex: 100px 4 4; /*flex-basis / flex-grow / flex-shirink */
+  order: 1;
 }
